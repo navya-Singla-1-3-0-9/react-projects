@@ -30,6 +30,12 @@ export const robots = [
       email: 'Lucio_Hettinger@annie.ca'
     },
     {
+      id: 9,
+      name: 'Glenna Reichert',
+      username: 'Delphine',
+      email: 'Chaim_McDermott@dana.io'
+    },
+    {
       id: 6,
       name: 'Mrs. Dennis Schulist',
       username: 'Leopoldo_Corkery',
@@ -47,12 +53,7 @@ export const robots = [
       username: 'Maxime_Nienow',
       email: 'Sherwood@rosamond.me'
     },
-    {
-      id: 9,
-      name: 'Glenna Reichert',
-      username: 'Delphine',
-      email: 'Chaim_McDermott@dana.io'
-    },
+   
     {
       id: 10,
       name: 'Clementina DuBuque',

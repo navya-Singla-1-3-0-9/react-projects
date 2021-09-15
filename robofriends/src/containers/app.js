@@ -1,11 +1,10 @@
 import React from 'react';
 //import ReactDOM from 'react-dom';
-import './index.css';
 //import Card from './card';
-import Cardlist from'./cardlist';
+import Cardlist from'../components/cardlist';
 import 'tachyons';
-import SearchBox from './searchbox';
-import {robots} from './robots';
+import SearchBox from '../components/searchbox';
+import {robots} from '../robots'
 import './app.css'
 
 class App extends React.Component{
@@ -20,7 +19,20 @@ class App extends React.Component{
         this.setState({searchfield: event.target.value});
        
     }
+    componentDidMount(){
+      /*  fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response=>{
+            console.log(response);
+            response.json();
+        })
+        .then(users=>{
+            //console.log(users.prototype);
+            
+        });
+        */
+    }
     render(){
+        //console.log(this.state.robots);
         const filteredRobots= this.state.robots.filter((robot)=>{
             return robot.name.toLowerCase().includes(this.state.searchfield.toLowerCase())
         });
@@ -28,7 +40,9 @@ class App extends React.Component{
         <div className="tc">
             <h1>Robofriends</h1>
             <SearchBox searchChange={this.onSearchChange}/>
+          
             <Cardlist robots={filteredRobots}/>
+        
         </div>
         );
     }
